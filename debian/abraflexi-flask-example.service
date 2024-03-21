@@ -1,0 +1,13 @@
+[Unit]
+Description=Smlouvy
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/smlouvy/.env
+User=www-data
+WorkingDirectory=/usr/share/smlouvy/web
+ExecStart=/usr/bin/gunicorn -b :8910 -w 4 wsgi:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

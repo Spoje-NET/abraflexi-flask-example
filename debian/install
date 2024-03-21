@@ -1,0 +1,2 @@
+web/*.py	    /usr/share/abraflexi-flask-example/web
+.env.example    /etc/abraflexi-flask-example/
